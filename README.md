@@ -1,57 +1,86 @@
+# 🚗 CarStore
+# Live Link: https://car-store-frontend-rose.vercel.app/
+## 📌 Overview
 
-# Car Store  
-# Link- https://car-store-amber.vercel.app/
+The Car Store Application is a user-friendly e-commerce platform designed for seamless car purchases. It features role-based authentication, inventory management, and secure payment integration, ensuring a smooth and reliable shopping experience for customers. 🚗💨
+
+## ✨ Key Features
+
+### 🔐 Authentication & Security
+
+- Secure user registration & login (name, email, password).
+- Passwords are **hashed** before storage.
+- **Role-based access** (Customers & Admins).
+- **JWT Authentication** for user sessions.
+- Logout removes JWT token and redirects to login.
+
+### 🌍 Public Pages
+
+#### 🏠 Home
+
+- **Navbar**: Logo, menu links, login/signup buttons.
+- **Hero Banner**: Featured promotions & special offers.
+- **Featured Bicycles**: Displays up to 6 products with a "View All" option.
+- **Extra Section**: Testimonials & reviews.
+- **Footer**: Contact details & social links.
+
+#### 🚲 CarStore Page
+
+- **Search & Filters**: Search by brand, name, category & price.
+- **Dynamic Listings**: Updates based on user input.
+- **Detailed Bicycle Cards**: Name, brand, model, price & category.
+
+#### 📄 Car Details Page
+
+- Displays product image, specs, and pricing.
+- "Buy Now" button redirects to the checkout page.
+
+#### ℹ️ About Page
+
+- Store mission & brand information.
+
+### 🔒 Private Routes
+
+#### 🛒 Checkout Page
+
+- Users can purchase Car securely.
+- **Stock Validation**: Orders are limited to available inventory.
+- **Order Summary**: Product details, user info, total price, and payment method.
+- **Payment Integration**: Supports SurjoPay, Stripe, etc.
+
+#### 📊 Dashboard
+
+- **User Dashboard**: View order history, update profile & change password securely.
+
+---
+
+## 🔧 Tech Stack
+
+- **Frontend:** React.js, Tailwind CSS, Redux, Typescript
+- **Backend:** Node.js, Express.js, Typescript
+- **Database:** MongoDB
+- **Hosting & Deployment:** Vercel
+- **Payment Gateway:** Shurjopay
+
+## 🚀 Installation & Setup
+
+### 🖥 Backend
+
+```sh
+cd server
+npm install
+npm start
+```
+
+### 🌐 Frontend
+
+```sh
+cd client
+npm install
+npm start
+```
+
+## 🌐 Live Demo
 
 
-The **Car Store** is a web application designed to manage the inventory and orders of cars in a store. It provides a robust API that allows users to perform CRUD operations on car data, create orders, and manage car availability. This project utilizes **Node.js**, **Express**, **MongoDB**, and **Mongoose**.
 
-
-## Features
-
-- **CRUD Operations for Cars**: Create, Read, Update, and Delete car data, including fields such as brand, model, price, quantity, and availability.
-
-  
-- **Order Management**: Users can place orders for cars, featuring email validation, stock quantity checks, and total price calculation.
-
-  
-- **Stock Management**: The system automatically updates car quantities when an order is placed, ensuring accurate inventory tracking.
-
-  
-- **Email Validation**: Validates customer emails before creating an order.
-
-  
-- **Error Handling**: Comprehensive error handling for scenarios like invalid input, insufficient stock, and missing data.
-
-  
-- **Data Validation**: Mongoose-based validation for all fields to ensure data integrity.
-
-
-
-## Technology Stack
-### Backend
-- **Node.js**
-- **Express.js**
-- **MongoDB** with **Mongoose ORM**
-  
-### Validation
-- **Mongoose Schema Validation**
-- **Email and Quantity Validation**
-
-### Error Handling
-- Custom error handling for common issues like missing data or insufficient stock. 
-## API Endpoints
-- **Car CRUD**: `/api/cars`
-- **Order CRUD**: `/api/orders`
-
-## Getting Started
-### Prerequisites 
-
-
-Before running the project locally, ensure you have the following installed:
-
-- **Node.js**: [Install Node.js](https://nodejs.org/)
-  
-- **MongoDB**: [Install MongoDB](https://www.mongodb.com/try/download/community) or use MongoDB Atlas for a cloud-based database.
-
-   git clone https://github.com/yourusername/car-store.git
-   cd car-store
